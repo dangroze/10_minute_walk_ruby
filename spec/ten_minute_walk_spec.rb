@@ -14,4 +14,8 @@ RSpec.describe 'is_valid?' do
     expect(is_valid?(['w', 's', 'e', 'e', 'n', 'n', 'e', 's', 'w', 'w'])).to eq(true)
   end
 
+  it 'returns false when you do not come back to starting point' do
+    expect(is_valid?(['w', 's', 'e', 'n', 'n', 'e', 's', 'w', 'w', 'w'])).to eq(false)
+  end
+
 end
